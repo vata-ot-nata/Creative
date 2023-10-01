@@ -1,0 +1,79 @@
+name: TestSpigot # the plugins name as it should appear in the plugin list /pl
+version: 1.0 # the plugin's version
+author: bulat5280
+main: ru.bulat5280.TestSpigot.Main
+
+events: # иваенты
+  - 'PlayerJoinEvent'
+  - 'PlayerExitEvent'
+  - 'BlockPlaceEvent'
+  - 'BlockBreakEvent'
+  - 'EntityDamageEvent'
+
+player: # действия игрока
+  - 'sendMessage'
+  - 'setGamemode'
+
+var: # действия переменной
+  - 'setValue'
+
+commands: #команды
+  ad:
+    description: Телепорт в мир
+    usage: /ad [айди]
+  games:
+    description: Меню миров
+    aliases: [ g, menu ]
+    usage: /games
+  donate:
+    description: Донат
+    aliases: [ d, donat ]
+    usage: /donate
+  tp:
+    description: Телепорт
+    aliases: [ teleport, to ]
+    usage: /tp [ник]
+  spawn:
+    description: Телепорт на спавн
+    aliases: [ s, hub, lobby ]
+    usage: /spawn
+  m:
+    description: Сообщение игроку
+    usage: /m [ник] [сообщение]
+    aliases: [ msg, tell ]
+  suffixes:
+    description: Суффиксы
+    aliases: [ suffix, prefixes, prefix ]
+    usage: /suffixes
+  setWorld:
+    description: изменение информации о мире
+    aliases: [ sw, set ]
+    usage: /sw <id> <name/owner/mode/status/spawn[X/Y/Z/Yaw/Pitch]> <value>
+  like:
+    description: Лайк
+    aliases: [ l, vote ]
+    usage: /like
+  ban:
+    description: Бан по нику
+    usage: /ban <nickname> <term> <reason>
+  pardon:
+    description: Разбан
+    usage: /pardon <nickname>
+    aliases: unban
+  ban-ip:
+    description: Бан по айпи
+    usage: /ban-ip <ip/nickname> <term> <reason>
+  mute:
+    description: Мут
+    usage: /mute <nickname> <term> <reason>
+  unmute:
+    description: Размут
+    usage: /unmute <nickname>
+  rank:
+    description: Управление рангами
+    usage: /rank <set/remove> <nickname> <rank>
+  ttc:
+    description: Текст в код
+    usage: /ttc <code>
+
+
